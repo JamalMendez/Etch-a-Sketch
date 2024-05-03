@@ -6,3 +6,10 @@ for (let i = 0; i < 16*16; i++) {
     content.appendChild(div);
 }
 
+const div = document.querySelectorAll(".grid");
+
+div.forEach(element => {
+    element.addEventListener("mouseover", e => {
+        element.style["background-color"] = "red";
+    });
+});
