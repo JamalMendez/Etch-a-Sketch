@@ -1,10 +1,16 @@
 const content = document.querySelector(".content");
 
-for (let i = 0; i < 16*16; i++) {
-    const div = document.createElement("div");
-    div.classList.add("grid");
-    content.appendChild(div);
-}
+const squareDraw = (width, height) => {
+    for (let i = 0; i < width*height; i++) {
+        const div = document.createElement("div");
+        div.classList.add("grid");
+        div.style.width = `calc(100%/${width})`;
+        div.style.height = `calc(100%/${height})`;
+        content.appendChild(div);
+    }
+};
+
+squareDraw(16,16);
 
 const div = document.querySelectorAll(".grid");
 
@@ -13,3 +19,5 @@ div.forEach(element => {
         element.style["background-color"] = "red";
     });
 });
+
+
