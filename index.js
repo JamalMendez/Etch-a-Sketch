@@ -20,4 +20,16 @@ div.forEach(element => {
     });
 });
 
+const button = document.querySelector("button");
 
+button.addEventListener("click", () => {
+    const width = prompt("Insert the width you want.");
+    const height = prompt("Insert the height you want.");
+
+    const deleteDivs = document.querySelectorAll(".grid");
+    deleteDivs.forEach(grid => {
+        grid.remove();
+    });
+
+    squareDraw(width, height);
+});
