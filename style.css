@@ -1,0 +1,16 @@
+.content {
+    display: flex;
+    flex-wrap: wrap;
+
+    background-color: aqua;
+    outline: 5px solid blue;
+    height: 640px;
+    width: 640px;
+}
+
+.grid {
+    background-color: gold;
+    outline: 5px solid goldenrod;
+    height: calc(100%/16);
+    width: calc(100%/16);
+}
